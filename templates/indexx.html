@@ -1,0 +1,73 @@
+<html >
+<head>
+  <title> placement prediction</title>  
+<style>
+body
+{
+background-repeat: no-repeat;
+background-attachment:fixed;
+background-size:cover;
+background-position: center;
+background-image: url({{url_for('static',filename='img2.jpg')}})
+}
+h1,h2{
+color:blue;
+}
+input[type=submit]:hover{
+  background-color: blue;
+}
+h5{
+border-radius: 100px;
+color:aqua;
+font-size: larger;
+}
+h4{
+  color:blue;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 15px 15px;
+  background: #ff1876;
+  color: #fff;
+  border-radius: 20px;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 25px rgba(255,0,130,0.5);
+  transition:box-shadow 0.25s;
+  z-index:2;
+}
+.btn:active{
+  background:#d80972;
+  box-shadow:0 2px 25px rgba(255,0,130,0.2);
+}
+</style>
+</head>
+
+<body>
+ <div>
+<h1><center>student Placement prediction</h1></center>
+
+   <center> <form action="{{ url_for ('predict') }}"method="post"></center>
+ <h5><center><label for="10<sup>th</sup> Percentage">10<sup>th</sup> Percentage<input type="text" name="10th percentage" placeholder="10th" required="required" /></label></center><br>
+<center><label for="12th Percentage">12<sup>th</sup> Percentage<input type="text" name="12thpercentage" placeholder="12th" required="required" /></label></center><br>
+<center><label for="UG Percentage">UG Percentage <input type="text" name="ug percentage" placeholder="ug" required="required" /></label></center><br>
+<center><label for="PG Percentage">PG Percentage<input type="text" name="pg percentage" placeholder="pg" required="required" /></label></center><br>
+<center><label for="certificate courses">Certificate Course<input type="text" name="certification course" placeholder="certification" required="required" /></label></center><br>
+        <center><button type="submit" class="btn" id="btn">prediction </button></center></h5>
+        <script>
+          alert("plzz..wait predict your result")</script>
+    </form>
+   <br>
+   <center><h2>{{ output }}</h2></center>
+
+ </div>
+
+
+</body>
+</html>
